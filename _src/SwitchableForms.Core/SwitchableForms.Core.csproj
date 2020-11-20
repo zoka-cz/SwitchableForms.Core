@@ -12,6 +12,7 @@
     <PackageProjectUrl>https://github.com/zoka-cz/SwitchableForms.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/zoka-cz/SwitchableForms.Core</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
+    <Version>0.9.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
