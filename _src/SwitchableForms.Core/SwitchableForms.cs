@@ -102,4 +102,21 @@ namespace Zoka.SwitchableForms
 
 	}
 
+	/// <summary>The class which holds two form models of specific types, and when rendered it allows user to select one of them.</summary>
+	public class SwitchableForms<T1, T2, T3> : SwitchableForms<T1, T2>
+		where T1 : ISwitchableFormModel
+		where T2 : ISwitchableFormModel
+		where T3 : ISwitchableFormModel
+	{
+		/// <summary>Constructor</summary>
+		public SwitchableForms(
+			int _model1_id, string _model1_display_name, T1 _model1,
+			int _model2_id, string _model2_display_name, T2 _model2,
+			int _model3_id, string _model3_display_name, T3 _model3)
+			: base(_model1_id, _model1_display_name, _model1, _model2_id, _model2_display_name, _model2)
+		{
+			m_Models.Add(new SwitchableFormModelWrapper(_model3_id, _model3_display_name, _model3));
+		}
+	}
+
 }

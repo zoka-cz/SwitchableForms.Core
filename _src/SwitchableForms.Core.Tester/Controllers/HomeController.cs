@@ -20,7 +20,7 @@ namespace SwitchableForms.Core.Tester.Controllers
 
 		public IActionResult Index(string message = null)
 		{
-			return View(message);
+			return View((object)message);
 		}
 
 

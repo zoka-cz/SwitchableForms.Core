@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Zoka.SwitchableForms;
 
 namespace SwitchableForms.Core.Tester
 {
@@ -24,7 +25,8 @@ namespace SwitchableForms.Core.Tester
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllersWithViews();
-			services.AddRazorPages();
+			services.AddRazorPages()
+					.ConfigureSwitchableForms();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
