@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <AssemblyName>Zoka.SwitchableForms</AssemblyName>
+    <RootNamespace>Zoka.SwitchableForms</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Authors>Zoka</Authors>
+    <Description>ASP.NET Core view component which allows to create multiple models, from which the user selects one and fill and submit this one.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/zoka-cz/SwitchableForms.Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zoka-cz/SwitchableForms.Core</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\XMLDocs\Zoka.SwitchableForms.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\XMLDocs\Zoka.SwitchableForms.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CaptureRenderTagHelper" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

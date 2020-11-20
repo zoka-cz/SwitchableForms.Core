@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchableForms.Core.Tester", "SwitchableForms.Core.Tester\SwitchableForms.Core.Tester.csproj", "{20892532-0F3C-4065-A812-EF5EB248EFC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchableForms.Core", "SwitchableForms.Core\SwitchableForms.Core.csproj", "{34B89123-C517-41B0-BA4F-0EBC1177555B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20892532-0F3C-4065-A812-EF5EB248EFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20892532-0F3C-4065-A812-EF5EB248EFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20892532-0F3C-4065-A812-EF5EB248EFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20892532-0F3C-4065-A812-EF5EB248EFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B89123-C517-41B0-BA4F-0EBC1177555B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B89123-C517-41B0-BA4F-0EBC1177555B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B89123-C517-41B0-BA4F-0EBC1177555B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B89123-C517-41B0-BA4F-0EBC1177555B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36850EBA-878B-49B2-9A8B-4736E2FBF4EB}
+	EndGlobalSection
+EndGlobal

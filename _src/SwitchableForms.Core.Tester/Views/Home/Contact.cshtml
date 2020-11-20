@@ -1,0 +1,17 @@
+﻿@model ContactModel
+
+@using (Html.BeginForm())
+{
+	@Html.ValidationSummary(true)
+
+	@Html.EditorForModel()
+
+	<button class="btn btn-primary" type="submit">
+		Submit
+	</button>
+}
+
+@section Scripts
+{
+	<script src="~/_content/Zoka.SwitchableForms/js/SwitchableForms/SwitchableForms.js"></script>
+}

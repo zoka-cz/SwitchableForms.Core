@@ -1,0 +1,17 @@
+﻿@model Object
+
+@foreach (var prop in ViewData.ModelExplorer.Properties.Where(me => !ViewData.TemplateInfo.Visited(me)))
+{
+	if (prop.Metadata.HideSurroundingHtml)
+	{
+		@Html.Editor(prop.Metadata.PropertyName);
+	}
+	else
+	{
+		<div class="form-group">
+			@Html.Label(prop.Metadata.PropertyName)
+			@Html.Editor(prop.Metadata.PropertyName, new { htmlAttributes = new { @class = "form-control" } }) @* passing htmlAttributes retaken from: https://cpratt.co/html-editorfor-and-htmlattributes/ *@
+			@Html.ValidationMessage(prop.Metadata.PropertyName, new { @class = "text-danger field-validation-valid" })
+		</div>
+	}
+}

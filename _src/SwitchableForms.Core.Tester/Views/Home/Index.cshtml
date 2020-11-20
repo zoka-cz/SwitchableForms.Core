@@ -1,0 +1,12 @@
+﻿@model string
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@if (!string.IsNullOrWhiteSpace(Model))
+{
+	<div class="alert alert-info">@Model</div>
+}
+
+<a asp-action="Contact">Contact form</a>
+

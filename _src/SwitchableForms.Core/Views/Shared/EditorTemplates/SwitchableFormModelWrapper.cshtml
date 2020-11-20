@@ -1,0 +1,7 @@
+﻿@model Zoka.SwitchableForms.SwitchableFormsModel.SwitchableFormModelWrapper
+
+<div class="SwitchableForm SwitchableForm@(Model.ModelId) editor hidden">
+	@Html.HiddenFor(m => m.ModelId)
+	@Html.HiddenFor(m => m.ModelDisplayName)
+	@Html.EditorFor(m => m.Model)
+</div>
