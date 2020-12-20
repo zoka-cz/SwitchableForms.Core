@@ -7,7 +7,7 @@
 	var html_id = Html.GenerateIdFromName(ViewData.TemplateInfo.GetFullHtmlFieldName(""));
 }
 
-<div id="SwitchableForms_@html_id" class="form-group">
+<div id="SwitchableForms_@html_id" class="form-group SwitchableForms" data-InitialSwitcherValue="@Model.Switcher">
 	@Html.ValidationMessageFor(m => m.Switcher)
 
 
