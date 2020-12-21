@@ -36,14 +36,14 @@
 
 			$switcher.on("change", function () {
 				var $editors = $(element).children("div.Editors");
-				var selected_form_div = $editors.children("div.SwitchableForm" + $(this).val());
+				var selected_form_div = $editors.children("div.SwitchableFormId" + $(this).val());
 				selected_form_div.removeClass("hidden");
 				selected_form_div.siblings().hide();
 				selected_form_div.show();
 			});
 
 			$(element).children("div.Editors").children("div.SwitchableForm").hide();
-			$(element).children("div.Editors").children("div.SwitchableForm" + plugin.settings.initialSwitcherValue).removeClass("hidden").show();
+			$(element).children("div.Editors").children("div.SwitchableFormId" + plugin.settings.initialSwitcherValue).removeClass("hidden").show();
 		}
 
 		plugin.init();

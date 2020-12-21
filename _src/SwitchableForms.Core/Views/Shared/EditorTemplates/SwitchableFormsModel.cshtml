@@ -7,10 +7,8 @@
 	var html_id = Html.GenerateIdFromName(ViewData.TemplateInfo.GetFullHtmlFieldName(""));
 }
 
-<div id="SwitchableForms_@html_id" class="form-group SwitchableForms" data-InitialSwitcherValue="@Model.Switcher">
+<div id="SwitchableForms_@html_id" class="form-group SwitchableForms" data-InitialSwitcherValue="@(Model.Switcher?.ToString() ?? "null")">
 	@Html.ValidationMessageFor(m => m.Switcher)
-
-
 	<div class="btn-group btn-group-toggle" data-toggle="buttons">
 		@foreach (var form_model in Model.Models)
 		{
@@ -27,7 +25,7 @@
 <script capture="General">
 $(function () {
 	$("#SwitchableForms_@html_id").SwitchableForms({
-		initialSwitcherValue: @(Model.Switcher)
+		initialSwitcherValue: @(Model.Switcher?.ToString() ?? "null")
 	});
 });
 </script>

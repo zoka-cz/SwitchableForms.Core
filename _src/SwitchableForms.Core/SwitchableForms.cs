@@ -53,7 +53,8 @@ namespace Zoka.SwitchableForms
 		}
 
 		/// <summary>Switcher to switch between form models</summary>
-		public int											Switcher { get; set; }
+		[Required]
+		public int?											Switcher { get; set; }
 
 		/// <summary>List of models</summary>
 		protected List<SwitchableFormModelWrapper>			m_Models = new List<SwitchableFormModelWrapper>();
