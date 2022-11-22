@@ -23,7 +23,11 @@ namespace Zoka.SwitchableForms
 				if (context.Metadata.ModelType.IsGenericType &&
 					(
 						(context.Metadata.ModelType.GenericTypeArguments.Length == 2 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,>)) ||
-						(context.Metadata.ModelType.GenericTypeArguments.Length == 3 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,,>))
+						(context.Metadata.ModelType.GenericTypeArguments.Length == 3 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,,>)) ||
+						(context.Metadata.ModelType.GenericTypeArguments.Length == 4 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,,,>)) ||
+						(context.Metadata.ModelType.GenericTypeArguments.Length == 5 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,,,,>)) ||
+						(context.Metadata.ModelType.GenericTypeArguments.Length == 6 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,,,,,>)) ||
+						(context.Metadata.ModelType.GenericTypeArguments.Length == 7 && context.Metadata.ModelType.GetGenericTypeDefinition() == typeof(SwitchableForms<,,,,,,>)) 
 					))
 				{
 					// and store binder and metadata for every single type

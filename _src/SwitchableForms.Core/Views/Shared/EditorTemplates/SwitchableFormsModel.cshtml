@@ -7,16 +7,12 @@
 	var html_id = Html.GenerateIdFromName(ViewData.TemplateInfo.GetFullHtmlFieldName(""));
 }
 
+
 <div id="SwitchableForms_@html_id" class="form-group SwitchableForms" data-InitialSwitcherValue="@(Model.Switcher?.ToString() ?? "null")">
 	@Html.ValidationMessageFor(m => m.Switcher)
-	<div class="btn-group btn-group-toggle" data-toggle="buttons">
-		@foreach (var form_model in Model.Models)
-		{
-			<label class="btn btn-light @(form_model.ModelId == Model.Switcher ? "active" : "")">
-				@Html.RadioButtonFor(m => m.Switcher, form_model.ModelId, new { autocomplete = "off" }) @form_model.ModelDisplayName
-			</label>
-		}
-	</div>
+
+	@await Html.PartialAsync("_SwitchableFormSwitcher.cshtml", Model)
+
 	<div class="Editors">
 			@Html.EditorFor(m => m.Models)
 	</div>
